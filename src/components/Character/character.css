@@ -13,6 +13,8 @@
     animation: newCharacter 1000ms ease-out;
     animation-iteration-count: 1;
     width: 16px;
+    height: 16px;
+    line-height: 16px;
     overflow: hidden;
     font-size: 1em;
     text-align: center;

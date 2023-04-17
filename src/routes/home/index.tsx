@@ -4,6 +4,7 @@ import { useColumns } from '../../hooks/resize';
 import { Column } from '../../components/Column/Column';
 const Home = () => {
   const columns = useColumns();
+  console.log(columns);
 
   const getColumns = () => {
     const columnDom = [];
