@@ -1,7 +1,7 @@
-import { h } from "preact";
-import style from "./style.css";
-import { useColumns } from "../../hooks/resize";
-import { Column } from "../../components/Column/Column";
+import { h } from 'preact';
+import style from './style.css';
+import { useColumns } from '../../hooks/resize';
+import { Column } from '../../components/Column/Column';
 const Home = () => {
   const columns = useColumns();
 

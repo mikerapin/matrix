@@ -1,7 +1,7 @@
-import { h } from "preact";
-import styles from "./column.css";
-import { randomCharacter } from "../../helpers/random";
-import { Character } from "../Character/Character";
+import { h } from 'preact';
+import styles from './column.css';
+import { randomCharacter } from '../../helpers/random';
+import { Character } from '../Character/Character';
 
 export const Column = () => {
   return (

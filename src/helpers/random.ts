@@ -1,4 +1,4 @@
-import { CHARACTERS } from "../components/Character/constants";
+import { CHARACTERS } from '../components/Character/constants';
 
 export const random = (min = 0, max = 256) => {
   const range = max - min + 1;

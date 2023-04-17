@@ -1,8 +1,8 @@
-import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import { random, randomCharacter, randomMax } from "../../helpers/random";
-import styles from "./character.css";
-import classNames from "classnames";
+import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
+import { random, randomCharacter, randomMax } from '../../helpers/random';
+import styles from './character.css';
+import classNames from 'classnames';
 
 const maxCount = randomMax();
 
