@@ -10,6 +10,10 @@
 .character {
     display: block;
     color: #0fff00;
-    animation: newCharacter 250ms ease-out;
+    animation: newCharacter 1000ms ease-out;
     animation-iteration-count: 1;
+    width: 16px;
+    overflow: hidden;
+    font-size: 1em;
+    text-align: center;
 }
