@@ -18,6 +18,10 @@ export const randomCharacter = () => {
   return CHARACTERS[r];
 };
 
+export const allCharacters = () => {
+  return CHARACTERS.join('');
+};
+
 export const randomMax = () => {
   return random(25, 2000);
 };
