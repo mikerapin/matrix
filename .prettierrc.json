@@ -1,0 +1,13 @@
+{
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 80,
+  "overrides": [
+    {
+      "files": "*.ts?x?$",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}

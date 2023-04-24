@@ -1,21 +1,22 @@
 :root {
-	font-family: 'Noto Sans Mono', 'Courier New', monospace;
-	font-weight: bold;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'Noto Sans Mono', 'Courier New', monospace;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-	color-scheme: light dark;
-	color: #0fff00;
-	background: #000;
+  color-scheme: light dark;
+  color: #0fff00;
+  background: #000;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
-a, a:visited {
-	color: #8686ff;
+a,
+a:visited {
+  color: #8686ff;
 }

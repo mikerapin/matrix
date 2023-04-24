@@ -13,10 +13,31 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    'linebreak-style': ['error', 'unix'],
-    'no-unused-vars': ['warn', { 'varsIgnorePattern': '^h$' }],
-    indent: ['error', 2],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
+    'arrow-body-style': 0,
+    'no-undef': 0,
+    '@typescript-eslint/no-unused-vars': 0,
+    'no-unused-vars': 0,
+    'no-console': 0,
+    'no-plusplus': 0,
+    'class-methods-use-this': 0,
+    'import/prefer-default-export': 0,
+    'no-param-reassign': ['error', { props: false }],
+    '@typescript-eslint/array-type': [
+      'error',
+      {
+        default: 'array',
+      },
+    ],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '(?:t|T)ype$',
+          match: false,
+        },
+      },
+    ],
   },
 };
