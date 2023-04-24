@@ -7,21 +7,52 @@
   }
 }
 
-.character {
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.characterCss,
+.characterJs {
   display: block;
   color: #0fff00;
   animation: newCharacter 1000ms ease-out;
   animation-iteration-count: 1;
   width: 16px;
-  height: 16px;
   line-height: 16px;
   overflow: hidden;
   font-size: 1em;
   text-align: center;
 }
 
+.characterJs {
+  height: 16px;
+}
+
+.characterContainer {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.characterCss {
+  position: absolute;
+  word-wrap: break-word;
+  width: 16px;
+}
+
 .highlight {
   color: #fff;
   animation: newCharacter 1000ms ease-out;
+  animation-iteration-count: 1;
+}
+
+.fadeOut {
+  animation: fadeOut 1000ms ease-out;
   animation-iteration-count: 1;
 }

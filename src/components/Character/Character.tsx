@@ -1,49 +1,72 @@
-import { h, RefObject } from 'preact';
+import { h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { random, randomCharacter, randomMax } from '../../helpers/random';
 import styles from './character.css';
 import classNames from 'classnames';
 
-const maxCount = randomMax();
-
 interface CharacterProps {
   baseCharacter: string;
-  highlight: number;
+  clearIndex: number;
+  highlightIndex: number;
   index: number;
 }
 
 export const Character = ({
   baseCharacter,
-  highlight,
+  clearIndex,
+  highlightIndex,
   index,
 }: CharacterProps) => {
   const [character, setCharacter] = useState<string>(baseCharacter);
   const [count, setCount] = useState(0);
+  const [hasPrinted, setHasPrinted] = useState(false);
 
   useEffect(() => {
-    let timeout;
-    const interval = setInterval(() => {
-      setCharacter(randomCharacter());
-      setCount(count + 1);
-    }, random(250, 5000));
+    let interval;
+    if (hasPrinted) {
+      interval = setInterval(() => {
+        setCharacter(randomCharacter());
+      }, random(250, 5000));
+    }
 
     return () => {
       clearInterval(interval);
-      clearTimeout(timeout);
     };
-  }, []);
-  if (count > maxCount) {
-    return null;
-  }
-  console.log(highlight);
+  }, [hasPrinted]);
+
+  useEffect(() => {
+    setCount(count + 1);
+  }, [character]);
+
+  useEffect(() => {
+    if (index === highlightIndex) {
+      setHasPrinted(true);
+    }
+  }, [highlightIndex]);
+
+  useEffect(() => {
+    if (index === clearIndex) {
+      setHasPrinted(false);
+    }
+  }, [clearIndex]);
+
+  const renderCharacter = () => {
+    if (hasPrinted || index === highlightIndex) {
+      return character;
+    }
+  };
 
   return (
     <span
-      className={classNames(styles.character, {
-        [styles.highlight]: highlight === index,
+      className={classNames(styles.characterJs, {
+        [styles.highlight]: highlightIndex === index,
+        [styles.fadeOut]: clearIndex === index,
       })}
+      data-count={count}
+      data-highlight={highlightIndex}
+      data-index={index}
     >
-      {character}
+      {renderCharacter()}
     </span>
   );
 };

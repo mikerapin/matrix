@@ -8,7 +8,7 @@ const AlternateRenderer = () => {
   const getColumns = () => {
     const columnDom = [];
     for (let i = 0; i < columns; i++) {
-      columnDom.push(<Column key={`column${i}`} useCss />);
+      columnDom.push(<Column key={`column${i}`} useCss={true} />);
     }
     return columnDom;
   };
